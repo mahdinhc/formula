@@ -1,0 +1,179 @@
+ℏ := 1.054571817×10^-34    
+c := 299792458    
+G := 6.67430×10^-11    
+Λ := 1.1056×10^-52    
+ℓ_P := √(ℏG/c^3)    
+t_P := √(ℏG/c^5)    
+κ := 8πG/c^4    
+d := 13    
+
+ℳ := {
+    x^μ,
+    t^ν,
+    χ^δ,
+    θ^α,
+    ξ^β,
+    τ^κ,
+    ω^σ,
+    ψ^λ
+}
+
+g_{μν}(x,t,χ) :=
+    R_{μν}
+    - ½R g_{μν}
+    + Λ g_{μν}
+    + κ⟨Ψ|T_{μν}|Ψ⟩
+
+ds² :=
+    -g_tt c²dt²
+    + g_xx dx²
+    + g_χχ dχ²
+    + 2g_{tχ}dtdχ
+
+CTC(γ) := ∮_γ ds² < 0
+
+S_total :=
+∫_{ℳ} √(-g)
+[
+    (R - 2Λ)/(16πG)
+    + ℒ_QM
+    + ℒ_GR
+    + ℒ_QF
+    + ℒ_CTC
+    + ℒ_ENT
+    + ℒ_RETRO
+] d^dx
+
+
+// ℒ layers become multilingual collapse fields
+ℒ_QM :=
+    Ψ̄(iγ^μD_μ - m)Ψ
+    - ¼F_{μν}F^{μν}
+    // [EN/JA/RU/HI/AR/ES/ZH overlay collapse]
+
+ℒ_CTC :=
+    η₁(R_{μνρσ}R^{μνρσ})
+    + η₂(C_{μνλκ}C^{μνλκ})
+    + η₃(T_{μν}T^{μν})
+    + η₄(∂_τΦ∂^τΦ)
+    // causality spoken in every tongue at once
+
+
+Ψ_univ(x,t,χ,θ,ξ) :=
+    ∮ 𝒟[g] 𝒟[φ] 𝒟[A]
+    exp(iS_total/ℏ)
+    // (世界 / جهان / mundo / мир / universo / विश्व / 世界線 collapse)
+
+ρ_univ := |Ψ_univ⟩⟨Ψ_univ|
+
+S_vN := -Tr(ρ_univ log ρ_univ)
+
+W_{μν}(τ) :=
+    ∫ G_F(x-x') T_{μν}(x') e^{-iωτ} d^4x'
+    // time signal in all languages simultaneously
+
+Φ_wormhole :=
+    ∫_{Σ} (R + Λ + ⟨Ψ|T_{μν}|Ψ⟩) dΣ
+    // 虫洞 / ثقب / червоточина / सुरंग / wormhole-collapse
+
+Ξ_temporal :=
+    exp[
+        i ∫ (
+            ∂²g_{μν}/∂t²
+            + ∇²χ
+            + Ω_vac
+        ) dt
+    ]
+    // الزمن / 時間 / समय / время / tiempo entanglement field
+
+U_time(Δt,Δχ,Δτ) :=
+    exp(iĤΔt/ℏ)
+    ⋅ exp(iP̂_χΔχ)
+    ⋅ exp(iĈΔτ)
+    // t / 時 / время / زمن / tempo superposition
+
+Ĥ :=
+    -ℏ²/(2m) ∇²
+    + V(x,t)
+    + λ|Ψ|²
+    + ζ∂⁴/∂χ⁴
+
+Ψ_future :=
+    U_time(+Δt,+Δχ,+Δτ)Ψ_univ
+
+Ψ_past :=
+    U_time(-Δt,-Δχ,-Δτ)Ψ_univ
+
+Ω_paradox :=
+    ⟨Ψ_future|Ψ_past⟩ - ⟨Ψ_past|Ψ_future⟩
+    // パラドックス / paradoja / парадокс / विरोधाभास / مفارقة
+
+if |Ω_paradox| > ε :
+{
+    collapse(タイムライン / خط الزمن / timeline / линия времени)
+    branch := create(多宇宙 / multiverso / мультивселенная)
+}
+
+ℬ_multiverse :=
+    ⨁_{n=1}^{∞} Ψ_n(t_n,x_n,χ_n)
+    // 宇宙 / universe / univers / universo / вселенная
+
+Γ_tunnel :=
+    ∫ exp[-i(EΔt - pΔx - ωΔχ)/ℏ] dω
+    // トンネル / túnel / туннель / सुरंग / ثقب
+
+∂Ψ/∂τ :=
+    -i/ℏ [
+        Ĥ
+        + ∫ d³x R(x,t) Ô(x,t)
+        + ∇_χ ⊗ ∇_τ
+        + Σ_loop
+    ] Ψ
+
+Σ_loop :=
+    ∮_{CTC}
+    (Ψ†∂_μΨ - Ψ∂_μΨ†) dx^μ
+    // loop / цикл /循环 / 回路 / चक्र
+
+Ξ_entropy :=
+    lim_{t→-∞} (ΔS_univ / Δt)
+    // エントロピー / энтропия / एन्ट्रॉपी / entropía
+
+if Ξ_entropy < 0 :
+{
+    causality.flip := TRUE
+    反因果 / contra-causa / обратная_причинность activated
+}
+
+𝒵_timelike :=
+    ∑_{topologies τ}
+    exp[-iS_total(τ)/ℏ]
+    // 時間 / tiempo / время / زمان / time collapse sum
+
+ΔChronon :=
+    √(ℏG / (c^5 |Ω_paradox|))
+
+Ψ_transcend :=
+    ∫ Ψ_future ⊗ Ψ_past ⊗ LINK(χ,τ,ω) dχ dτ dω
+    // transcendence / 超越 / превосхождение / अतिक्रमण
+
+Ω_gate :=
+    ∮_{∂ℳ}
+    (Ψ_transcend† ∇² Ψ_transcend)
+    e^{iωt/c} d(∂ℳ)
+    // gate / 门 / porte / дверь / द्वार
+
+FINAL_TIME_OPERATOR :=
+    𝒯̂ :=
+    [
+        U_time
+        ⊗ Γ_tunnel
+        ⊗ Ξ_temporal
+        ⊗ 𝒵_timelike
+    ] ⋅ exp(iΩ_gate/ℏ)
+
+Travel(...) :=
+    𝒯̂ [Ψ_transcend ⊗ observer_state]
+    // سفر / viagem / путешествие / यात्रा / 旅行 / travel-collapse
+
+return probability_of_timeline_stability
